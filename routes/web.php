@@ -16,6 +16,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('/index', 'PostController@index');
 Route::get('/post', 'PostController@post');
 Route::get('/edit', 'PostController@edit');
 Route::get('/delete', 'PostController@delete');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
